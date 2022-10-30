@@ -25,6 +25,9 @@ local servers = {
     terraform_lsp = {},
     cmake = {},
     rust_analyzer = {},
+    -- vuels = {},
+    -- cmake = {},
+    -- rust_analyzer = {},
 }
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -43,4 +46,11 @@ clangd_capabilities.textDocument.completion.completionItem.snippetSupport =
 lspconfig.clangd.setup({
     on_attach = on_attach,
     capabilities = clangd_capabilities,
+})
+
+local rt = require("rust-tools")
+rt.setup({
+    server = {
+        on_attach = on_attach,
+    },
 })
