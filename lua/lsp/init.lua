@@ -12,21 +12,22 @@ local servers = {
     pyright = {},
     sumneko_lua = sumneko_config,
     bashls = {},
-    -- dockerls = {},
+    dockerls = {},
     tsserver = {},
-    -- html = {},
+    html = {},
     -- emmet_ls = {},
     -- cssls = {},
     -- tailwindcss = {},
     texlab = {},
-    -- vuels = {},
-    -- cmake = {},
+    vuels = {},
+    rnix = {},
+    yamlls = {},
+    terraform_lsp = {},
+    cmake = {},
     rust_analyzer = {},
 }
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lspconfig = require("lspconfig")
 for server, config in pairs(servers) do
