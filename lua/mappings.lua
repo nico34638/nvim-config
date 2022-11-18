@@ -5,6 +5,7 @@ vim.keymap.set("n", "<C-k>", "<c-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-s>", ":w<cr>")
 
 wk.register({
     ["<leader>"] = { ":e #<CR>", "previous file" },
